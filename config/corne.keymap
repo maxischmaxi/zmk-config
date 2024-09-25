@@ -76,7 +76,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 &kp TAB ___ &kp LBRC &kp LBKT &kp LPAR &kp RPAR &kp RBKT &kp RBRC ___ ___
                                 &kp GRAVE &kp PIPE &kp CARET &kp AT ___ &kp LEFT &kp DOWN &kp UP &kp RIGHT ___
                                 ___ ___ ___ ___ ___ &euro_sign &de_eszett &de_ae &de_ue &de_oe
-                                &kp LGUI &kp BACKSPACE &kp SPACE &kp LALT ___ &kp DEL 
+                                &kp LGUI &kp LALT &kp SPACE &kp RET ___ &kp DEL 
                         >;
                 };
 
