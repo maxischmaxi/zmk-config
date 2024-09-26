@@ -53,6 +53,12 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         #binding-cells = <0>;
                         bindings = <&macro_tap &kp RET &kp N &kp I &kp C &kp E &kp SPACE &kp T &kp U &kp T &kp O &kp R &kp I &kp A &kp L &kp RET>;
                 };
+
+                macro_gg: zed_em_kay {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp RET &kp G &kp G &kp RET>;
+                };
         };
 
         keymap {
@@ -91,7 +97,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 lol_layer {
                         display-name = "LOL";
                         bindings = <
-                                &mt P ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp T &kp U ___ ___ &nice_tutorial
+                                &mt P ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp T &kp U ___ &macro_gg &nice_tutorial
                                 &kp TAB &kp Q &kp W &kp E &kp R ___ ___ ___ ___ ___ 
                                 ___ &kp A &kp G &kp D &kp F ___ ___ ___ ___ ___
                                 &kp LCTRL &kp LALT &kp SPACE ___ ___ ___
