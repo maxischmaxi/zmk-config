@@ -51,12 +51,14 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 nice_tutorial: zed_em_kay {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
+                        tap-ms = <10>;
                         bindings = <&macro_tap &kp RET &kp N &kp I &kp C &kp E &kp SPACE &kp T &kp U &kp T &kp O &kp R &kp I &kp A &kp L &kp RET>;
                 };
 
                 macro_gg: zed_em_kay {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
+                        tap-ms = <10>;
                         bindings = <&macro_tap &kp RET &kp G &kp G &kp RET>;
                 };
         };
