@@ -9,11 +9,12 @@
 #define LOW 1
 #define HIG 2
 #define LOL 3
+#define EGO 4
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 &mt {
-    tapping-term-ms = <100>;
+    tapping-term-ms = <150>;
 };
 
 / {
@@ -23,10 +24,15 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
         combos {
                 compatible = "zmk,combos";
-                combo_esc {
+                combo_lol {
                       timeout-ms = <50>;
                       key-positions = <32 33>;
                       bindings = <&tog LOL>;
+                };
+                combo_ego {
+                        timeout-ms = <50>;
+                        key-positions = <4 5>;
+                        bindings = <&tog EGO>;
                 };
         };
 
