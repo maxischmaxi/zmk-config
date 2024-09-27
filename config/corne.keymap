@@ -36,7 +36,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp N &kp I &kp C &kp E &kp SPACE &kp T &kp U &kp T &kp O &kp R &kp I &kp A &kp L &kp RET>;
+                                , <&macro_tap &kp N &kp I &kp C &kp E &kp SPACE &kp T &kp U &kp T &kp O &kp R &kp I &kp A &kp L &kp RET>
                                 ;
                 };
 
