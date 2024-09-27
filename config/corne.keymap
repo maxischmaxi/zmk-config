@@ -1,9 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
-//https://github.com/urob/zmk-helpers#international-charactersherunterladen
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
+//https://github.com/urob/zmk-helpers#international-charactersherunterladen
 
 #define ___ &none
 #define DEF 0
@@ -12,6 +11,10 @@
 #define LOL 3
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
+
+&mt {
+    tapping-term-ms = <100>;
+};
 
 / {
         chosen {
@@ -103,8 +106,18 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         bindings = <
                                 &mt P ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp T &kp U ___ &macro_gg &macro_nice_tutorial
                                 &kp TAB &kp Q &kp W &kp E &kp R ___ ___ ___ ___ &macro_ez 
-                                ___ &kp A &kp G &kp D &kp F &kp B ___ ___ ___ ___
+                                ___ &kp A ___ &kp D &kp F &kp B ___ ___ ___ ___
                                 &kp LCTRL &kp LALT &kp SPACE ___ ___ ___
+                        >;
+                };
+
+                ego_layer {
+                        display-name = "EGO";
+                        bindings = <
+                                &kp ESC &kp Q &kp W &kp E ___ ___ ___ ___ ___ ___
+                                ___ &kp A &kp S &kp D &kp F ___ ___ ___ ___
+                                &kp LCTRL &kp Y &kp C ___ ___ ___ ___ ___ ___ ___
+                                ___ ___ ___ ___ ___ ___
                         >;
                 };
         };
