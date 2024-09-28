@@ -124,7 +124,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         bindings = <
                                 &kp ESC &kp Q &kp W &kp E &kp R ___ ___ ___ ___ &tog EGO 
                                 &kp TAB &kp A &kp S &kp D &kp F ___ ___ ___ ___ ___
-                                &kp LSHFT &kp Y ___ &kp C &kp G ___ ___ ___ ___ ___
+                                &kp LSHFT &kp Y ___ &kp C &kp G &kp M ___ ___ ___ ___
                                 &kp LCTRL &kp LALT &kp SPACE ___ ___ ___
                         >;
                 };
