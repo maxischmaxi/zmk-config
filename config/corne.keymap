@@ -24,11 +24,13 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
         combos {
                 compatible = "zmk,combos";
+                
                 combo_lol {
                       timeout-ms = <50>;
                       key-positions = <32 33>;
                       bindings = <&tog LOL>;
                 };
+
                 combo_ego {
                         timeout-ms = <50>;
                         key-positions = <4 5>;
@@ -120,10 +122,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 ego_layer {
                         display-name = "EGO";
                         bindings = <
-                                &kp ESC &kp Q &kp W &kp E ___ ___ ___ ___ ___ ___
-                                ___ &kp A &kp S &kp D &kp F ___ ___ ___ ___
-                                &kp LCTRL &kp Y &kp C ___ ___ ___ ___ ___ ___ ___
-                                ___ ___ ___ ___ ___ ___
+                                &kp ESC &kp Q &kp W &kp E &kp R ___ ___ ___ ___ &tog EGO 
+                                &kp TAB &kp A &kp S &kp D &kp F ___ ___ ___ ___ ___
+                                &kp LSHFT &kp Y ___ &kp C &kp G ___ ___ ___ ___
+                                &kp LCTRL &kp LALT &kp SPACE ___ ___ ___
                         >;
                 };
         };
