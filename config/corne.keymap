@@ -14,7 +14,7 @@
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <170>;
 };
 
 / {
@@ -71,7 +71,19 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp E &kp Z>
+                                , <&macro_tap &kp E &kp Z &kp RET>
+                                ;
+                };
+
+                macro_ff: macro_ff {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        tap-ms = <2>;
+                        bindings
+                                = <&macro_press &kp LSHFT>
+                                , <&macro_tap &kp RET>
+                                , <&macro_release &kp LSHFT>
+                                , <&macro_tap &kp F &kp F &kp RET>
                                 ;
                 };
         };
@@ -83,29 +95,29 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         display-name = "DEF";
                         bindings = <
                                 &kp Q &kp W &kp E &kp R &kp T &kp Z &kp U &kp I &kp O &kp P
-                                &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &mt LSHFT SQT
-                                &kp Y &kp X &kp C &kp V &kp B &kp N &kp M &kp DOT &kp COMMA &mt LCTRL SLASH
-                                &kp LCTRL &kp ESC &lt HIG SPACE &lt LOW RET &kp BACKSPACE &mt LGUI TAB
+                                &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp LSHFT 
+                                &kp Y &kp X &kp C &kp V &kp B &kp N &kp M &kp DOT &kp COMMA &kp SLASH
+                                &kp LCTRL &kp ESC &lt HIG SPACE &lt LOW RET &kp BACKSPACE &kp LGUI 
                         >;
                 };
 
                 low_layer {
                         display-name = "LOW";
                         bindings = <
-                                &mt EXCL N1 &mt DOUBLE_QUOTES N2 &mt HASH N3 &mt DLLR N4 &mt PERCENT N5 &mt AMPERSAND N6 &kp N7 &kp N8 &kp N9 &mt BACKSLASH N0
-                                &kp PLUS &kp MINUS &kp STAR &kp EQUAL &kp COLON &kp AT &de_ae &de_ue &de_oe &kp QUESTION
-                                &mt GRAVE PIPE &kp CARET &kp TILDE &kp UNDERSCORE &kp SEMICOLON &kp LT &kp GT &euro_sign &de_eszett &kp SLASH
-                                &kp LGUI &kp SPACE &kp RET ___ &kp RET &kp DEL 
+                                &kp EXCL &kp DOUBLE_QUOTES &kp HASH &kp DLLR &kp PERCENT &kp AMPERSAND &kp PLUS &kp GRAVE &kp PIPE &kp BACKSLASH
+                                &kp TAB &kp MINUS &kp STAR &kp EQUAL &kp COLON &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp AT
+                                &kp SQT &kp CARET &kp TILDE &kp UNDERSCORE &kp SEMICOLON &kp LT &kp GT  &kp SLASH &kp QUESTION ___
+                                &kp DEL &kp LALT &kp RET ___ &kp RET &kp DEL 
                         >;
                 };
 
                 hig_layer {
                         display-name = "HIG";
                         bindings = <
-                                ___ ___ &kp LBRC &kp LBKT &kp LPAR &kp RPAR &kp RBKT &kp RBRC &kp LALT &kp TAB
-                                ___ ___ ___ ___ &kp COLON &kp LEFT &kp DOWN &kp UP &kp RIGHT ___
-                                ___ ___ ___ ___ &kp SEMICOLON ___ ___ ___ ___ ___
-                                &kp LGUI &kp SPACE ___ &kp LALT &kp RET &kp DEL
+                                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+                                &kp TAB ___ &kp LBRC &kp LBKT &kp LPAR &kp RPAR &kp RBKT &kp RBRC ___ ___
+                                ___ ___ ___ ___ ___ &de_ae &de_ue &de_oe &euro_sign &de_eszett
+                                &kp DEL &kp SPACE ___ &kp RET &kp LALT &kp DEL
                         >;
                 };
 
@@ -114,7 +126,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         bindings = <
                                 &mt P ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp T &kp U ___ &macro_gg &macro_nice_tutorial
                                 &kp TAB &kp Q &kp W &kp E &kp R ___ ___ ___ ___ &macro_ez 
-                                ___ &kp A ___ &kp D &kp F &kp B ___ ___ ___ ___
+                                ___ &kp A &kp Y &kp D &kp F &kp B ___ ___ ___ &macro_ff 
                                 &kp LCTRL &kp LALT &kp SPACE ___ ___ ___
                         >;
                 };
