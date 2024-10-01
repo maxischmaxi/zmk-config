@@ -106,7 +106,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                         display-name = "LOW";
                         bindings = <
                                 &kp DE_EXCL &kp DE_DQT &kp DE_HASH &kp DE_DLLR &kp DE_PERCENT &kp DE_AMPERSAND &kp DE_PLUS &kp DE_GRAVE &kp DE_PIPE &kp DE_BACKSLASH
-                                &kp DE_TAB &kp DE_MINUS &kp DE_STAR &kp DE_EQUAL &kp DE_COLON &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DE_AT
+                                &kp TAB &kp DE_MINUS &kp DE_STAR &kp DE_EQUAL &kp DE_COLON &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DE_AT
                                 &kp DE_SQT &kp DE_CARET &kp DE_TILDE &kp DE_UNDERSCORE &kp DE_SEMICOLON &kp DE_LT &kp DE_GT  &kp DE_SLASH &kp DE_QUESTION ___
                                 &kp DEL &kp LALT &kp RET ___ &kp RET &kp DEL 
                         >;
