@@ -323,7 +323,7 @@
                 macro_nice_tutorial: macro_nice_tutorial {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        tap-ms = <2>;
+                        tap-ms = <1>;
                         bindings 
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
@@ -335,7 +335,7 @@
                 macro_gg: macro_gg {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        tap-ms = <2>;
+                        tap-ms = <1>;
                         bindings 
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
@@ -347,7 +347,7 @@
                 macro_ez: macro_ez {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        tap-ms = <2>;
+                        tap-ms = <1>;
                         bindings
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
@@ -359,12 +359,40 @@
                 macro_ff: macro_ff {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        tap-ms = <2>;
+                        tap-ms = <1>;
                         bindings
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
                                 , <&macro_tap &kp DE_F &kp DE_F &kp RET>
+                                ;
+                };
+
+                macro_send_nudes: macro_send_nudes {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        tap-ms = <1>;
+                        bindings
+                                = <&macro_press &kp LSHFT>
+                                , <&macro_tap &kp RET>
+                                , <&macro_release &kp LSHFT>
+                                , <&macro_tap &kp DE_SLASH>
+                                , <&macro_press &kp LSHFT>
+                                , <&macro_tap &kp DE_R>
+                                , <&macro_release &kp LSHFT>
+                                , <&macro_tap &kp DE_SPACE>
+                                , <&macro_tap &kp DE_S &kp DE_O &kp DE_R &kp DE_R &kp DE_Y>
+                                , <&macro_tap &kp DE_SPACE>
+                                , <&macro_tap &kp DE_B &kp DE_A &kp DE_B &kp DE_E>
+                                , <&macro_tap &kp DE_SPACE>
+                                , <&macro_tap &kp DE_S &kp E &kp N &kp D>
+                                , <&macro_tap &kp DE_SPACE>
+                                , <&macro_tap &kp DE_N &kp U &kp D &kp E &kp S>
+                                , <&macro_tap &kp DE_SPACE>
+                                , <&macro_tap &kp DE_L &kp DE_A &kp DE_T &kp DE_E &kp DE_R>
+                                , <&macro_tap &kp DE_SPACE>
+                                , <&macro_tap &kp DE_P &kp DE_L &kp DE_S>
+                                , <&macro_tap &kp RET>
                                 ;
                 };
         };
@@ -388,7 +416,7 @@
                                 &kp DE_EXCL &kp DE_DQT &kp DE_SECT &kp DE_DLLR &kp DE_PERCENT &kp DE_AMPERSAND &kp DE_PLUS &kp DE_GRAVE &kp DE_PIPE &kp DE_BACKSLASH
                                 &kp TAB &kp DE_MINUS &kp DE_STAR &kp DE_EQUAL &kp DE_COLON &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DE_AT
                                 &kp DE_SQT &kp DE_CARET &kp DE_TILDE &kp DE_UNDERSCORE &kp DE_SEMICOLON &kp DE_LT &kp DE_GT  &kp DE_SLASH &kp DE_QUESTION &kp DE_HASH 
-                                &kp DEL &kp LALT &kp RET ___ &kp RET &kp DEL 
+                                &kp DEL &kp LALT &kp LGUI ___ &kp RET &kp DEL 
                         >;
                 };
 
