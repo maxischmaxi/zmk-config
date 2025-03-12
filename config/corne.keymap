@@ -8,8 +8,6 @@
 #define DEF 0
 #define LOW 1
 #define HIG 2
-#define LOL 3
-#define EGO 4
 
 #define DE_ESCAPE_CHARACTER (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
 
@@ -435,7 +433,7 @@
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp DE_G &kp DE_G &kp SPACE &kp DE_W &kp DE_P &kp RET>
+                                , <&macro_tap &kp G &kp G &kp SPACE &kp W &kp P &kp RET>
                                 ;
                 };
 
@@ -447,7 +445,7 @@
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp DE_E &kp DE_Z &kp RET>
+                                , <&macro_tap &kp E &kp Z &kp RET>
                                 ;
                 };
 
@@ -459,7 +457,7 @@
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp DE_F &kp DE_F &kp RET>
+                                , <&macro_tap &kp F &kp F &kp RET>
                                 ;
                 };
 
@@ -471,22 +469,22 @@
                                 = <&macro_press &kp LSHFT>
                                 , <&macro_tap &kp RET>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp DE_SLASH>
+                                , <&macro_tap &kp SLASH>
                                 , <&macro_press &kp LSHFT>
-                                , <&macro_tap &kp DE_R>
+                                , <&macro_tap &kp R>
                                 , <&macro_release &kp LSHFT>
-                                , <&macro_tap &kp DE_SPACE>
-                                , <&macro_tap &kp DE_S &kp DE_O &kp DE_R &kp DE_R &kp DE_Y>
-                                , <&macro_tap &kp DE_SPACE>
-                                , <&macro_tap &kp DE_B &kp DE_A &kp DE_B &kp DE_E>
-                                , <&macro_tap &kp DE_SPACE>
-                                , <&macro_tap &kp DE_S &kp E &kp N &kp D>
-                                , <&macro_tap &kp DE_SPACE>
-                                , <&macro_tap &kp DE_N &kp U &kp D &kp E &kp S>
-                                , <&macro_tap &kp DE_SPACE>
-                                , <&macro_tap &kp DE_L &kp DE_A &kp DE_T &kp DE_E &kp DE_R>
-                                , <&macro_tap &kp DE_SPACE>
-                                , <&macro_tap &kp DE_P &kp DE_L &kp DE_S>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_tap &kp S &kp O &kp R &kp R &kp Y>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_tap &kp B &kp A &kp B &kp E>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_tap &kp S &kp E &kp N &kp D>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_tap &kp N &kp U &kp D &kp E &kp S>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_tap &kp L &kp A &kp T &kp E &kp R>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_tap &kp P &kp L &kp S>
                                 , <&macro_tap &kp RET>
                                 ;
                 };
@@ -498,10 +496,10 @@
                 def_layer {
                         display-name = "DEF";
                         bindings = <
-                                &kp DE_Q &kp DE_W &kp DE_E &kp DE_R &kp DE_T &kp DE_Z &kp DE_U &kp DE_I &kp DE_O &kp DE_P
-                                &kp DE_A &kp DE_S &kp DE_D &kp DE_F &kp DE_G &kp DE_H &kp DE_J &kp DE_K &kp DE_L &kp SEMI
-                                &kp DE_Y &kp DE_X &kp DE_C &kp DE_V &kp DE_B &kp DE_N &kp DE_M &kp DE_COMMA &kp DE_DOT &kp FLSH 
-                                &mt LCTRL TAB &kp LEFT_GUI &lt HIG DE_SPACE &lt LOW RET &mt LEFT_SHIFT BACKSPACE &mt RIGHT_ALT ESC
+                                &kp Q &kp W &kp E &kp R &kp T &kp Z &kp U &kp I &kp O &kp P
+                                &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI
+                                &kp Y &kp X &kp C &kp V &kp B &kp N &kp M &kp DE_COMMA &kp DE_DOT &kp FLSH
+                                &mt LCTRL TAB &kp LEFT_GUI &lt HIG SPACE &lt LOW RET &mt LEFT_SHIFT BACKSPACE &mt RIGHT_ALT ESC
                         >;
                 };
 
@@ -520,8 +518,8 @@
                 hig_layer {
                         display-name = "HIG";
                         bindings = <
-                                &kp DE_N1 &kp DE_N2 &kp DE_N3 &kp DE_N4 &kp DE_N5 &kp LESS_THAN &kp LEFT_BRACKET &kp LEFT_BRACE &kp LEFT_PARENTHESIS &kp SEMICOLON
-                                &kp DE_N6 &kp DE_N7 &kp DE_N8 &kp DE_N9 &kp NUMBER_0 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
+                                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp LESS_THAN &kp LEFT_BRACKET &kp LEFT_BRACE &kp LEFT_PARENTHESIS &kp SEMICOLON
+                                &kp N6 &kp N7 &kp N8 &kp N9 &kp NUMBER_0 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
                                 &kp BACKSLASH &kp MINUS &kp EQUAL &kp SLASH &kp ASTERISK &kp GREATER_THAN &kp RIGHT_BRACKET &kp RIGHT_BRACE &kp RIGHT_PARENTHESIS &kp GRAVE
                                 ___ ___ ___ ___ ___ ___
                         >;
