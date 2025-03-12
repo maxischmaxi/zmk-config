@@ -295,7 +295,10 @@
 #define DE_EURO (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E)))
 
 &mt {
-    tapping-term-ms = <170>;
+        tapping-term-ms = <400>;
+        quick-tap-ms = <175>;
+        require-prior-idle-ms = <150>;
+        flavor = "balanced";
 };
 
 / {
@@ -305,19 +308,111 @@
 
         combos {
                 compatible = "zmk,combos";
-                
-                combo_lol {
-                      timeout-ms = <50>;
-                      key-positions = <32 33>;
-                      bindings = <&tog LOL>;
+
+                combo_esc {
+                        timeout-ms = <50>;
+                        key-positions = <1 2 3>;
+                        bindings = <&kp ESCAPE>;
                 };
 
-                combo_ego {
+                combo_bksp {
                         timeout-ms = <50>;
-                        key-positions = <4 5>;
-                        bindings = <&tog EGO>;
+                        key-positions = <10 9 8>;
+                        bindings = <&kp BACKSPACE>;
+                };
+
+                combo_tab {
+                        bindings = <&kp TAB>;
+                        key-positions = <13 14 15>;
+                };
+
+                combo_shift {
+                        bindings = <&kp LEFT_SHIFT>;
+                        key-positions = <25 26 27>;
+                };
+
+                combo_delete {
+                        bindings = <&kp DELETE>;
+                        key-positions = <21 22 20>;
+                };
+
+                combo_rshift {
+                        bindings = <&kp RIGHT_SHIFT>;
+                        key-positions = <33 34 32>;
+                };
+
+                exclm {
+                        bindings = <&kp EXCLAMATION>;
+                        key-positions = <1 13>;
+                };
+
+                at {
+                        bindings = <&kp AT_SIGN>;
+                        key-positions = <2 14>;
+                };
+
+                hash {
+                        bindings = <&kp HASH>;
+                        key-positions = <3 15>;
+                };
+
+                dllr {
+                        bindings = <&kp DOLLAR>;
+                        key-positions = <4 16>;
+                };
+
+                percnt {
+                        bindings = <&kp PERCENT>;
+                        key-positions = <5 17>;
+                };
+
+                caret {
+                        bindings = <&kp CARET>;
+                        key-positions = <6 18>;
+                };
+
+                and {
+                        bindings = <&kp AMPERSAND>;
+                        key-positions = <7 19>;
+                };
+
+                str {
+                        bindings = <&kp ASTERISK>;
+                        key-positions = <8 20>;
+                };
+
+                leftparen {
+                        bindings = <&kp LPAR>;
+                        key-positions = <9 21>;
+                };
+
+                rparen {
+                        bindings = <&kp RPAR>;
+                        key-positions = <10 22>;
+                };
+
+                layout_switch {
+                        bindings = <&tog 4>;
+                        key-positions = <36 37 40 41>;
+                };
+
+                system_reset {
+                        bindings = <&sys_reset>;
+                        key-positions = <3 4 5 14>;
+                };
+
+                bootloader {
+                        bindings = <&bootloader>;
+                        key-positions = <15 16 17 26>;
+                };
+
+                system_layer_combo {
+                        bindings = <&mo 3>;
+                        key-positions = <36 37 38>;
                 };
         };
+
+        conditional_layers { compatible = "zmk,conditional-layers";};
 
         macros {
                 macro_nice_tutorial: macro_nice_tutorial {
@@ -404,9 +499,9 @@
                         display-name = "DEF";
                         bindings = <
                                 &kp DE_Q &kp DE_W &kp DE_E &kp DE_R &kp DE_T &kp DE_Z &kp DE_U &kp DE_I &kp DE_O &kp DE_P
-                                &kp DE_A &kp DE_S &kp DE_D &kp DE_F &kp DE_G &kp DE_H &kp DE_J &kp DE_K &kp DE_L &kp LSHFT 
-                                &kp DE_Y &kp DE_X &kp DE_C &kp DE_V &kp DE_B &kp DE_N &kp DE_M &kp DE_DOT &kp DE_COMMA &kp DE_SLASH
-                                &kp LCTRL &kp ESC &lt HIG DE_SPACE &lt LOW RET &kp BACKSPACE &kp LGUI 
+                                &kp DE_A &kp DE_S &kp DE_D &kp DE_F &kp DE_G &kp DE_H &kp DE_J &kp DE_K &kp DE_L &kp SEMI
+                                &kp DE_Y &kp DE_X &kp DE_C &kp DE_V &kp DE_B &kp DE_N &kp DE_M &kp DE_COMMA &kp DE_DOT &kp FLSH 
+                                &mt LCTRL TAB &kp LEFT_GUI &lt HIG DE_SPACE &lt LOW RET &mt LEFT_SHIFT BACKSPACE &mt RIGHT_ALT ESC
                         >;
                 };
 
@@ -416,37 +511,19 @@
                                 &kp DE_EXCL &kp DE_DQT &kp DE_SECT &kp DE_DLLR &kp DE_PERCENT &kp DE_AMPERSAND &kp DE_PLUS &kp DE_GRAVE &kp DE_PIPE &kp DE_BACKSLASH
                                 &kp TAB &kp DE_MINUS &kp DE_STAR &kp DE_EQUAL &kp DE_COLON &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DE_AT
                                 &kp DE_SQT &kp DE_CARET &kp DE_TILDE &kp DE_UNDERSCORE &kp DE_SEMICOLON &kp DE_LT &kp DE_GT  &kp DE_SLASH &kp DE_QUESTION &kp DE_HASH 
-                                &kp DEL &kp LALT &kp LGUI ___ &kp RET &kp DEL 
+                                ___ ___ ___ ___ ___ ___
                         >;
                 };
+
+                // &kp DE_A_UMLAUT &kp DE_U_UMLAUT &kp DE_O_UMLAUT &kp DE_EURO &kp DE_SZ
 
                 hig_layer {
                         display-name = "HIG";
                         bindings = <
-                                &kp DE_N1 &kp DE_N2 &kp DE_N3 &kp DE_N4 &kp DE_N5 &kp DE_N6 &kp DE_N7 &kp DE_N8 &kp DE_N9 &kp DE_N0
-                                &kp TAB &kp DE_SQUARE &kp DE_LBRC &kp DE_LBKT &kp DE_LPAR &kp DE_RPAR &kp DE_RBKT &kp DE_RBRC ___ ___
-                                &kp DE_DEG &kp K_CUT &kp K_CUT &kp K_PASTE &kp DE_MU &kp DE_A_UMLAUT &kp DE_U_UMLAUT &kp DE_O_UMLAUT &kp DE_EURO &kp DE_SZ
-                                &kp DEL &kp DE_SPACE ___ &kp RET &kp LALT &kp DEL
-                        >;
-                };
-
-                lol_layer {
-                        display-name = "LOL";
-                        bindings = <
-                                &mt DE_P ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp T &kp U ___ &macro_gg &macro_nice_tutorial
-                                &kp TAB &kp DE_Q &kp DE_W &kp DE_E &kp DE_R ___ ___ ___ ___ &macro_ez 
-                                ___ &kp DE_A &kp DE_Y &kp DE_D &kp DE_F &kp DE_B ___ ___ ___ &macro_ff 
-                                &kp LCTRL &kp LALT &kp DE_SPACE ___ ___ ___
-                        >;
-                };
-
-                ego_layer {
-                        display-name = "EGO";
-                        bindings = <
-                                &kp ESC &kp DE_Q &kp DE_W &kp DE_E &kp DE_R ___ ___ ___ ___ &tog EGO 
-                                &kp TAB &kp DE_A &kp DE_S &kp DE_D &kp DE_F &kp DE_G ___ ___ ___ ___
-                                &kp LSHFT &kp DE_Y ___ &kp DE_C &kp DE_B &kp DE_N &kp DE_M ___ ___ ___
-                                &kp LCTRL &kp LALT &kp DE_SPACE ___ ___ ___
+                                &kp DE_N1 &kp DE_N2 &kp DE_N3 &kp DE_N4 &kp DE_N5 &kp LESS_THAN &kp LEFT_BRACKET &kp LEFT_BRACE &kp LEFT_PARENTHESIS &kp SEMICOLON
+                                &kp DE_N6 &kp DE_N7 &kp DE_N8 &kp DE_N9 &kp NUMBER_0 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
+                                &kp BACKSLASH &kp MINUS &kp EQUAL &kp SLASH &kp ASTERISK &kp GREATER_THAN &kp RIGHT_BRACKET &kp RIGHT_BRACE &kp RIGHT_PARENTHESIS &kp GRAVE
+                                ___ ___ ___ ___ ___ ___
                         >;
                 };
         };
