@@ -340,52 +340,52 @@
                 };
 
                 exclm {
-                        bindings = <&kp EXCLAMATION>;
+                        bindings = <&kp DE_EXCLAMATION>;
                         key-positions = <1 13>;
                 };
 
                 at {
-                        bindings = <&kp AT_SIGN>;
+                        bindings = <&kp DE_AT>;
                         key-positions = <2 14>;
                 };
 
                 hash {
-                        bindings = <&kp HASH>;
+                        bindings = <&kp DE_HASH>;
                         key-positions = <3 15>;
                 };
 
                 dllr {
-                        bindings = <&kp DOLLAR>;
+                        bindings = <&kp DE_DOLLAR>;
                         key-positions = <4 16>;
                 };
 
                 percnt {
-                        bindings = <&kp PERCENT>;
+                        bindings = <&kp DE_PERCENT>;
                         key-positions = <5 17>;
                 };
 
                 caret {
-                        bindings = <&kp CARET>;
+                        bindings = <&kp DE_CARET>;
                         key-positions = <6 18>;
                 };
 
                 and {
-                        bindings = <&kp AMPERSAND>;
+                        bindings = <&kp DE_AMPERSAND>;
                         key-positions = <7 19>;
                 };
 
                 str {
-                        bindings = <&kp ASTERISK>;
+                        bindings = <&kp DE_ASTERISK>;
                         key-positions = <8 20>;
                 };
 
                 leftparen {
-                        bindings = <&kp LPAR>;
+                        bindings = <&kp DE_LPAR>;
                         key-positions = <9 21>;
                 };
 
                 rparen {
-                        bindings = <&kp RPAR>;
+                        bindings = <&kp DE_RPAR>;
                         key-positions = <10 22>;
                 };
 
