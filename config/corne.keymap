@@ -489,7 +489,7 @@
                                 &kp Q &kp W &kp E &kp R &kp T &kp Z &kp U &kp I &kp O &kp P
                                 &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI
                                 &kp Y &kp X &kp C &kp V &kp B &kp N &kp M &kp DE_COMMA &kp DE_DOT &kp DE_SLASH
-                                &mt LCTRL TAB &kp LEFT_GUI &lt HIG SPACE &lt LOW RET &mt LEFT_SHIFT BACKSPACE &mt RIGHT_ALT ESC
+                                &mt LCTRL TAB &kp LEFT_GUI &lt HIG SPACE &lt LOW RET &mt LEFT_SHIFT BACKSPACE &mt LEFT_ALT ESC
                         >;
                 };
 
