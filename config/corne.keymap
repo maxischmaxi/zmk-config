@@ -519,7 +519,7 @@
                         display-name = "HIG";
                         bindings = <
                                 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp LESS_THAN &kp LEFT_BRACKET &kp LEFT_BRACE &kp LEFT_PARENTHESIS &kp SEMICOLON
-                                &kp N6 &kp N7 &kp N8 &kp N9 &kp NUMBER_0 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
+                                &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
                                 &kp BACKSLASH &kp MINUS &kp EQUAL &kp SLASH &kp ASTERISK &kp GREATER_THAN &kp RIGHT_BRACKET &kp RIGHT_BRACE &kp RIGHT_PARENTHESIS &kp GRAVE
                                 ___ ___ ___ ___ ___ ___
                         >;
